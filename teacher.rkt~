@@ -22,7 +22,7 @@
 (define (prof id n m)
   (let* ([pgc (sqlite3-connect #:database "./grade.db")])
   (query-exec pgc "INSERT INTO Professores(id , Nome , Materia)  
-                   VALUES ($1 , $2 , $3)" id n m) ; Professores = Teachers , Materia = Class
+                   VALUES ($1 , $2 , $3)" id n m) ; Professores = Teachers , Materia = 
     (displayln n)
     (displayln m)
     (disconnect pgc)))
@@ -30,7 +30,7 @@
 (define (avali nota com)
   (let* ([pgc (sqlite3-connect #:database "./grade.db")])
   (query-exec pgc "INSERT INTO Avaliacao(Nota , Comentario ) 
-                   VALUES ($1 , $2)" nota com) ; Comentario = Commentary , Avaliacao = Grade
+                   VALUES ($1 , $2)" nota com) ; Comentario = Commentary , Avaliacao = 
     (displayln nota)
     (displayln com)
     (disconnect pgc)))
@@ -61,7 +61,7 @@
              *To add a major type 'area' the id and the name
              *To remove type 'rem2' and the id
             3- To show the teachers!
-             *To add a teacher type 'prof' the id , the name and the class
+             *To add a teacher type 'prof' the id the name and the 
              *To remove type 'rem3' and the id
             4- To show all notes and commentaries
              *To add a note and a comemtary type 'avali' the note and the commentary")
