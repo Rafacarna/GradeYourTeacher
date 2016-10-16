@@ -5,7 +5,6 @@
 #lang racket
 
 (require db)
-(require 2htdp/universe 2htdp/image)
 
 (define pgc
   (sqlite3-connect #:database "./gradeteacher.db")) ; Connect in the db
